@@ -1,0 +1,27 @@
+footer.footer-nav.container
+    div.footer-nav__logo
+        a.logo(href="#")
+            img(src="img/logo.png" alt="logo")
+            | bran
+            span d
+        p.footer-nav__p Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+        p.footer-nav__p Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+
+    div.footer-nav__coll
+        a.footer-nav__header(href="#") company
+        -
+            var list = ["home", "shop", "about", "how it works", "contact"]
+        each item in list
+            a.footer-nav__item(href="#")= item
+    div.footer-nav__coll
+        a.footer-nav__header(href="#") information
+        -
+            var list = ["tearms & condition", "privacy policy", "how to buy", "how to sell", "promotion"]
+        each item in list
+            a.footer-nav__item(href="#")= item
+    div.footer-nav__coll
+        a.footer-nav__header(href="#") shop category
+        -
+            var list = ["men", "women", "child", "apparel", "brows all"]
+        each item in list
+            a.footer-nav__item(href="#")= item

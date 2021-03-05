@@ -1,0 +1,19 @@
+mixin nav(link)
+    - var linkarr = link
+    - for (var i=0; i<linkarr.length; i++)
+    if linkarr[i][1].length > 0
+        div.dropdown
+            a= linkarr[i][0]
+            div.dropdown-child(style="top: 50px")
+                each item in linkarr[i][1]
+                    a= item
+    else
+        a= linkarr[i][0]
+
++nav([["home", ["3", "9", "25"]],
+    ["man", ["3", "8"]],
+    ["women", []],
+    ["kids", []],
+    ["accessories", []],
+    ["featured", []],
+    ["hot deals", ["3"]]])

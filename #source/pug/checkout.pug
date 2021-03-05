@@ -1,0 +1,72 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        title Checkout
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css")
+        link(rel="stylesheet" href="css/style.css")
+    body
+
+        include include/header
+        include include/breadcrumb
+
+        div.container.checkout
+            div.checkout-item
+                p.checkout-item__title
+                    span.checkout-item__title-number 01.
+                    span shipping address
+                div.checkout-card__wrap
+                    div.checkout-card
+                        div.checkout-card__column
+                            p.checkout-card__title check as a guest or register
+                            p.checkout-card__text Register with us for future convenience
+                            form.checkout-card__form(id="checkout-form")
+                                div.checkout-card__radio-group
+                                    input.checkout-card__radio(type="radio" id="checkout" name="reg")
+                                    label.checkout-card__label-radio(for="checkout") checkout as guest
+                                div.checkout-card__radio-group
+                                    input.checkout-card__radio(type="radio" id="register" name="reg")
+                                    label.checkout-card__label-radio(for="register") register
+                            p.checkout-card__title register and save time!
+                            p.checkout-card__text Register with us for future convenience
+                            p.checkout-card__text.checkout-text__icon Fast and easy checkout
+                            p.checkout-card__text.checkout-text__icon Easy access to your order history and status
+                            div.checkout-card__button-wrap
+                                button.checkout-card__button(form="checkout-form") continue
+                        div.checkout-card__column
+                            p.checkout-card__title already registed?
+                            p.checkout-card__text Please log in below
+                            label.checkout-card__label-text(for="email" ) email address
+                            input.checkout-card__textbox(type="text" id="email" form="checkout-form")
+                            label.checkout-card__label-text(for="password") password
+                            input.checkout-card__textbox(type="text" id="password" form="checkout-form")
+                            p.checkout-card__text(id="alert") * Required Fields
+                            div.checkout-card__button-wrap
+                                button.checkout-card__button(form="checkout-form") log in
+                                a.checkout-card__button-text(href="#") Forgot Password?
+            div.checkout-item
+                p.checkout-item__title
+                    span.checkout-item__title-number 02.
+                    span billing information
+            div.checkout-item
+                p.checkout-item__title
+                    span.checkout-item__title-number 03.
+                    span shipping information
+            div.checkout-item
+                p.checkout-item__title
+                    span.checkout-item__title-number 04.
+                    span shipping method
+            div.checkout-item
+                p.checkout-item__title
+                    span.checkout-item__title-number 05.
+                    span payment method
+            div.checkout-item
+                p.checkout-item__title
+                    span.checkout-item__title-number 06.
+                    span order review
+        include include/subscribe
+        include include/footernav
+        include include/footercopyright
+

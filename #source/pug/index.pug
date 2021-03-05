@@ -1,0 +1,90 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    title Главная
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="css/style.css")
+  body
+
+    include include/header
+
+    section.slider
+      div.container
+        div.block.sliderimg
+          h1.slidertext the brand
+            span of luxerious
+              span fashion
+
+    section.container
+      div.category
+        div.categorycontent
+          div.categoryboxbig(style="background-image: url(img/Layer_30.png)")
+            p hot deal
+              span for men
+            a(href="#")
+          div.categoryboxsmall(style="background-image: url(img/Layer_37.png)")
+            p luxirous &amp; trendy
+              span accesories
+            a(href="#")
+        div.categorycontent
+          div.categoryboxsmall(style="background-image: url(img/Layer_32.png)")
+            p 30% offer
+              span women
+            a(href="#")
+          div.categoryboxbig(style="background-image: url(img/Layer_31.png)")
+            p new arrivals
+              span for kids
+            a(href="#")
+
+    section.container
+      p.items-h2 Fetured Items
+        span.items-h2-span Shop for items based on what we feautered in this week
+      div.items-wrap
+        mixin items-card(img, alt, price)
+          .items-card
+            .items-img-layer
+              img.items-img(src=img alt=alt)
+              .items-card-hide
+                a.items-card-a(href="#")
+                  img.items-card-add(src="img/Forma%201%20copy.png" alt="add")
+                  | Add to Cart
+            p.items-h3= alt
+              span.items-card-price= price
+        +items-card('img/Layer_2.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_3.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_4.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_5.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_6.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_7.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_8.png', 'mango people t-shirt', '$52.00')
+        +items-card('img/Layer_9.png', 'mango people t-shirt', '$52.00')
+
+      a.browse-product(href="#") Browse All Product
+        i.fa.fa-long-arrow-right(aria-hidden="true")
+
+    section.container
+      div.offer
+        div.offer-img
+          h2.offer-h2 30%
+            span.offer-h2__color offer
+            span.offer-h2__bottom for women
+        div.offer-info
+          mixin offer-card(img, alt, h, p)
+            div.offer-card
+              div.offer-card-image
+                img.offer-card__img(src=img alt=alt)
+              div.offer-card-text
+                h3.offer-card__h3= h
+                  span.offer-card__span= p
+          +offer-card('img/Forma_1%20(1).png', 'car', 'Free Delivery', 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.')
+          +offer-card('img/Forma_1%20(2).png', 'offer', 'Sales & discounts', 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.')
+          +offer-card('img/Forma_1%20(3).png', 'king', 'Quality assurance', 'Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.')
+
+    include include/subscribe
+
+    include include/footernav
+
+    include include/footercopyright

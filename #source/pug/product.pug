@@ -1,0 +1,140 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Главная
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css")
+        link(rel="stylesheet" href="css/style.css")
+    body
+
+        include include/header
+
+        include include/breadcrumb
+
+
+
+
+        div.container
+            div.block-product
+                div.collaps
+                    div.collaps-block
+                        input.collaps-radio(type="radio" name="collaps-radio" id="collaps1")
+                        label.collaps-category(for="collaps1") category
+                        div.collaps-list
+                            -
+                                var list = ["Accessories", "Bags", "Denim", "Hoodies &amp; Sweatshirts", "Jackets &amp; Coats", "Pants", "Polos", "Shirts", "Shoes", "Shorts", "Sweaters &amp; Knits", "T-Shirts", "Tanks"]
+                            each item in list
+                                a.collaps-list__item.collaps-a(href="#")= item
+                    div.collaps-block
+                        input.collaps-radio(type="radio" name="collaps-radio" id="collaps2")
+                        label.collaps-category(for="collaps2") brand
+                        div.collaps-list
+                            -
+                                var list = ["Accessories", "Bags", "Denim", "Hoodies &amp; Sweatshirts", "Jackets &amp; Coats", "Pants", "Polos", "Shirts", "Shoes", "Shorts", "Sweaters &amp; Knits", "T-Shirts", "Tanks"]
+                            each item in list
+                                a.collaps-list__item.collaps-a(href="#")= item
+                    div.collaps-block
+                        input.collaps-radio(type="radio" name="collaps-radio" id="collaps3")
+                        label.collaps-category(for="collaps3") designer
+                div.product
+                    div.produkt-filter
+                        div.produkt-filter__item
+                            p.produkt-filter__item-h trending now
+                            div.trending-group
+                                a.trending-group__a.trending-group__delimiter(href="#") Bohemian
+                                a.trending-group__a.trending-group__delimiter(href="#") Floral
+                                a.trending-group__a(href="#") Lace
+                            div.trending-group
+                                a.trending-group__a.trending-group__delimiter(href="#") Lace
+                                a.trending-group__a.trending-group__delimiter(href="#") Floral
+                                a.trending-group__a(href="#") Bohemian
+                        div.produkt-filter__item
+                            p.produkt-filter__item-h size
+                            form.trending-size(action="#")
+                                -
+                                    var list = ["xxs", "xs", "s", "m", "l", "xl", "xxl"]
+                                each item in list
+                                    div.trending-size__item
+                                        input(type="checkbox")
+                                        = item
+                        div.produkt-filter__item
+                            p.produkt-filter__item-h prise
+                            img.prise-line(src="img/prise.png" alt="prise-line")
+                            div.prise-num
+                                p &#36;52
+                                p &#36;400
+                    div.product-sort
+                        div.sort-menu
+                            p.sort-menu__label Sort By
+                            p.sort-menu__name Name
+                            ul.sort-menu__ul
+                                li.sort-menu__li Name 1
+                                li.sort-menu__li Name 10
+                                li.sort-menu__li Name 100
+                        div.sort-menu
+                            p.sort-menu__label SShow
+                            p.sort-menu__name 09
+                            ul.sort-menu__ul
+                                li.sort-menu__li Name 1
+                                li.sort-menu__li Name 10
+                                li.sort-menu__li Name 100
+                    div.product-card
+                        mixin items-card(img, alt, price)
+                            .items-card
+                                .items-img-layer
+                                    img.items-img(src=img alt=alt)
+                                    .items-card-hide
+                                        a.items-card-a(href="#")
+                                            img.items-card-add(src="img/Forma%201%20copy.png" alt="add")
+                                            | Add to Cart
+                                        a.items-card-a.items-icon(href="#")
+                                            <i class="fa fa-retweet" aria-hidden="true"></i>
+                                        a.items-card-a.items-icon(href="#")
+                                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                p.items-h3= alt
+                                    span.items-card-price= price
+                        +items-card('img/product_card_1.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_2.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_3.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_4.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_5.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_6.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_7.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_8.png', 'mango people t-shirt', '$52.00')
+                        +items-card('img/product_card_9.png', 'mango people t-shirt', '$52.00')
+                    div.product-footer
+                        div.product-pagination
+                            a.product-pagination__link.active-link(href="#") 1
+                            a.product-pagination__link(href="#") 2
+                            a.product-pagination__link(href="#") 3
+                            a.product-pagination__link(href="#") 4
+                            a.product-pagination__link(href="#") 5
+                            a.product-pagination__link(href="#") 6
+                            a.product-pagination__link.last-link(href="#") 20
+                        a.product-pagination__view-all(href="#") View All
+
+
+        div.container-full.offer-color
+            div.container
+                div.offer-info-horizontal
+                    div.offer-card-horizontal
+                        div.offer-card-image
+                            img.offer-card__img(src="img/Forma_1%20(1).png" alt="car")
+                        h3.offer-card-horizontal__h3 Free Delivery
+                        p.offer-card-horizontal__p Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    div.offer-card-horizontal
+                        div.offer-card-image
+                            img.offer-card__img(src="img/Forma_1%20(2).png" alt="car")
+                        h3.offer-card-horizontal__h3 Free Delivery
+                        p.offer-card-horizontal__p Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+                    div.offer-card-horizontal
+                        div.offer-card-image
+                            img.offer-card__img(src="img/Forma_1%20(3).png" alt="car")
+                        h3.offer-card-horizontal__h3 Free Delivery
+                        p.offer-card-horizontal__p Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
+
+        include include/subscribe
+        include include/footernav
+        include include/footercopyright

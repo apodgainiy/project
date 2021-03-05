@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="topline">
+      <header class="container">
+        <div class="topline-content">
+          
+          <a class="logo" href="#"><img src="img/logo.png" alt="logo">bran<span>d</span></a>
+          <form class="searchform" action="#">
+            <div class="dropdown"><a class="browsebutton" href="#">Browse</a>
+              <div class="dropdown-child" style="top: 36px">
+                <div class="dropdown-child__menu">
+                  <p class="dropdown-header">women</p>
+                  <div class="dropdown-child__nav"><a class="dropdown-link" href="#">Dresses</a><a class="dropdown-link" href="#">Tops</a><a class="dropdown-link" href="#">Sweaters/Knits</a><a class="dropdown-link" href="#">Jackets/Coats</a><a class="dropdown-link" href="#">Blazers</a><a class="dropdown-link" href="#">Denim</a><a class="dropdown-link" href="#">Leggins/Pants</a><a class="dropdown-link" href="#">Skirts/Shorts</a><a class="dropdown-link" href="#">Accessories</a>
+                  </div>
+                  <p class="dropdown-header">men</p>
+                  <div class="dropdown-child__nav"><a class="dropdown-link" href="#">Tees/Tank tops</a><a class="dropdown-link" href="#">Shirts/Polos</a><a class="dropdown-link" href="#">Sweaters</a><a class="dropdown-link" href="#">Sweatshirts/Hoodies</a><a class="dropdown-link" href="#">Blazers</a><a class="dropdown-link" href="#">Jackets/vests</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="text" placeholder="Search for item..."><a class="searchbutton" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+          </form><img class="basket" src="img/Forma_1.png" alt="basket"><a class="myaccount" href="#">My Account</a>
+        </div>
+      </header>
+    </div>
+    <nav class="topnav"><a class="topnav-a" href="#">home</a><a class="topnav-a" href="#">man</a>
+            <div class="dropdown"><a class="topnav-a" href="#">women</a>
+              <div class="dropdown-child" style="top: 50px">
+                    <div class="megamenu">
+                      <p>women</p>
+                      <p>women</p>
+                      <p>women</p><a href="#">women</a>
+                    </div>
+              </div>
+            </div><a class="topnav-a" href="#">kids</a><a class="topnav-a" href="#">accessories</a>
+            <div class="dropdown"><a class="topnav-a" href="#">featured</a>
+              <div class="dropdown-child" style="top: 50px">
+                    <div class="megamenu">
+                      <p>feature</p>
+                      <p>feature</p>
+                      <p>feature</p><a href="#">feature</a>
+                    </div>
+              </div>
+            </div>
+            <div class="dropdown"><a class="topnav-a" href="#">hot deals</a>
+              <div class="dropdown-child" style="top: 50px">
+                    <div class="megamenu">
+                      <p>hot deals</p>
+                      <p>hot deals</p>
+                      <p>hot deals</p><a href="#">hot deals</a>
+                    </div>
+              </div>
+            </div>
+    </nav>
+    <section class="breadcrumb-color">
+      <div class="container">
+        <div class="breadcrumb">
+          <h2 class="breadcrumb-h2">new arrivals</h2>
+          <div class="breadcrumb-way">
+            
+            <a class="breadcrumb-way__link" href="#">home </a>
+            
+            <a class="breadcrumb-way__link" href="#">men </a><a class="breadcrumb-way__link-now" href="#">new arrivals</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container checkout">
+      <div class="checkout-item">
+        <p class="checkout-item__title"><span class="checkout-item__title-number">01.</span><span>shipping address</span></p>
+        <div class="checkout-card__wrap">
+          <div class="checkout-card">
+            <div class="checkout-card__column">
+              <p class="checkout-card__title">check as a guest or register</p>
+              <p class="checkout-card__text">Register with us for future convenience</p>
+              <form class="checkout-card__form" id="checkout-form">
+                <div class="checkout-card__radio-group">
+                  <input class="checkout-card__radio" type="radio" id="checkout" name="reg">
+                  <label class="checkout-card__label-radio" for="checkout">checkout as guest</label>
+                </div>
+                <div class="checkout-card__radio-group">
+                  <input class="checkout-card__radio" type="radio" id="register" name="reg">
+                  <label class="checkout-card__label-radio" for="register">register</label>
+                </div>
+              </form>
+              <p class="checkout-card__title">register and save time!</p>
+              <p class="checkout-card__text">Register with us for future convenience</p>
+              <p class="checkout-card__text checkout-text__icon">Fast and easy checkout</p>
+              <p class="checkout-card__text checkout-text__icon">Easy access to your order history and status</p>
+              <div class="checkout-card__button-wrap">
+                <button class="checkout-card__button" form="checkout-form">continue</button>
+              </div>
+            </div>
+            <div class="checkout-card__column">
+              <p class="checkout-card__title">already registed?</p>
+              <p class="checkout-card__text">Please log in below</p>
+              <label class="checkout-card__label-text" for="email">email address</label>
+              <input class="checkout-card__textbox" type="text" id="email" form="checkout-form">
+              <label class="checkout-card__label-text" for="password">password</label>
+              <input class="checkout-card__textbox" type="text" id="password" form="checkout-form">
+              <p class="checkout-card__text" id="alert">* Required Fields</p>
+              <div class="checkout-card__button-wrap">
+                <button class="checkout-card__button" form="checkout-form">log in</button><a class="checkout-card__button-text" href="#">Forgot Password?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-item">
+        <p class="checkout-item__title"><span class="checkout-item__title-number">02.</span><span>billing information</span></p>
+      </div>
+      <div class="checkout-item">
+        <p class="checkout-item__title"><span class="checkout-item__title-number">03.</span><span>shipping information</span></p>
+      </div>
+      <div class="checkout-item">
+        <p class="checkout-item__title"><span class="checkout-item__title-number">04.</span><span>shipping method</span></p>
+      </div>
+      <div class="checkout-item">
+        <p class="checkout-item__title"><span class="checkout-item__title-number">05.</span><span>payment method</span></p>
+      </div>
+      <div class="checkout-item">
+        <p class="checkout-item__title"><span class="checkout-item__title-number">06.</span><span>order review</span></p>
+      </div>
+    </div>
+    <section class="cotainer-full subscribe">
+      <div class="container">
+        <div class="subscribe-block">
+          <div class="subscribe-comment">
+            <div class="subscribe-comment__avatar"><img class="subscribe-comment__img" src="img/Layer_40.png" alt="avatar"></div>
+            <div class="subscribe-comment__comment"><i>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</i>
+              <p class="subscribe-comment__p"><span class="subscribe-comment__span">Bin Burhan</span></p>Dhaka, Bd
+              <div class="subscribe-comment__line first-line"></div>
+              <div class="subscribe-comment__line line-color"></div>
+              <div class="subscribe-comment__line"></div>
+            </div>
+          </div>
+          <div class="subscribe-line"></div>
+          <div class="subscribe-form">
+            <h2 class="subscribe-form__h2">subscribe</h2>
+            <p class="subscribe-form__p">for our newletter and promotion</p>
+            <form class="subscribe-form__form" action="#">
+              <input class="subscribe-form__input" type="text" placeholder="Enter Your Email"><a class="subscribe-form__button" href="#">Subscribe</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-nav container">
+      <div class="footer-nav__logo"><a class="logo" href="#"><img src="img/logo.png" alt="logo">bran<span>d</span></a>
+        <p class="footer-nav__p">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
+        <p class="footer-nav__p">Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+      </div>
+      <div class="footer-nav__coll"><a class="footer-nav__header" href="#">company</a><a class="footer-nav__item" href="#">home</a><a class="footer-nav__item" href="#">shop</a><a class="footer-nav__item" href="#">about</a><a class="footer-nav__item" href="#">how it works</a><a class="footer-nav__item" href="#">contact</a>
+      </div>
+      <div class="footer-nav__coll"><a class="footer-nav__header" href="#">information</a><a class="footer-nav__item" href="#">tearms &amp; condition</a><a class="footer-nav__item" href="#">privacy policy</a><a class="footer-nav__item" href="#">how to buy</a><a class="footer-nav__item" href="#">how to sell</a><a class="footer-nav__item" href="#">promotion</a>
+      </div>
+      <div class="footer-nav__coll"><a class="footer-nav__header" href="#">shop category</a><a class="footer-nav__item" href="#">men</a><a class="footer-nav__item" href="#">women</a><a class="footer-nav__item" href="#">child</a><a class="footer-nav__item" href="#">apparel</a><a class="footer-nav__item" href="#">brows all</a>
+      </div>
+    </footer>
+    <footer class="footer-color">
+      <div class="container">
+        <div class="footer">
+          <p class="footer-copyright">© 2017  Brand  All Rights Reserved.</p><a class="footer-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a><a class="footer-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="footer-social" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a><a class="footer-social" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a><a class="footer-social" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+footer.footer-color
+    div.container
+        div.footer
+            p.footer-copyright © 2017  Brand  All Rights Reserved.
+            mixin link(href)
+                a.footer-social(href=href)
+                    i(class!=attributes.class aria-hidden="true")
+            +link('#')(class="fa fa-facebook")
+            +link('#')(class="fa fa-twitter")
+            +link('#')(class="fa fa-linkedin")
+            +link('#')(class="fa fa-pinterest-p")
+            +link('#')(class="fa fa-google-plus")

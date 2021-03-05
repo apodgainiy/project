@@ -1,0 +1,12 @@
+section.breadcrumb-color
+    div.container
+        div.breadcrumb
+            h2.breadcrumb-h2 new arrivals
+            div.breadcrumb-way
+                -
+                    var list = ["home ", "men "]
+                each item in list
+                    |
+                    |
+                    a.breadcrumb-way__link(href="#")= item
+                a.breadcrumb-way__link-now(href="#") new arrivals

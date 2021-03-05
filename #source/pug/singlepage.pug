@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Главная
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css")
+        link(rel="stylesheet" href="css/style.css")
+    body
+
+        include include/header
+        include include/breadcrumb
+
+        div.singlepage-slider
+            a.singlepage-slider__nav(href="#")
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            a.singlepage-slider__nav(href="#")
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+        div.container
+            div.singlepage-feature
+                div.singlepage-feature__wrap
+                    p.singlepage-feature__category WOMEN COLLECTION
+                    h1.singlepage-feature__h1 Moschino Cheap And Chic
+                    p.singlepage-feature__description Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.
+                    div.singlepage-feature__info-wrap
+                        p.singlepage-feature__info-caption MATERIAL:
+                            span.singlepage-feature__info-item COTTON
+                        p.singlepage-feature__info-caption DESIGNER:
+                            span.singlepage-feature__info-item BINBURHAN
+                    p.singlepage-feature__price $561
+                    form.cart-form(action="#")
+                        label.cart-form__label Choose color
+                            select.cart-form__field(name="select" id="select-color")
+                                option(value="red") Red
+                                option(value="blue") Blue
+                                option(value="green") Green
+                        label.cart-form__label Choose size
+                            select.cart-form__field(name="select" id="select-size")
+                                option(value="XXL") XXL
+                                option(value="XL") XL
+                                option(value="L") L
+                        label.cart-form__label Quantity
+                            input.cart-form__field(type="text" placeholder="XXL")
+                        button.cart-form__submit Add to Cart
+
+        div.container.singlepage-also
+            p.singlepage-also__header you may like also
+            div.items-wrap
+                mixin items-card(img, alt, price)
+                    .items-card
+                        .items-img-layer
+                            img.items-img(src=img alt=alt)
+                            a.items-card-hide.items-card-a(href="#")
+                        p.items-h3= alt
+                            span.items-card-price= price
+                +items-card('img/singlepage_2.png', 'blaze leggings', '$52.00')
+                +items-card('img/singlepage_3.png', 'alexa sweater', '$52.00')
+                +items-card('img/singlepage_4.png', 'agnes top', '$52.00')
+                +items-card('img/singlepage_5.png', 'sylva sweater', '$52.00')
+
+
+        include include/subscribe
+        include include/footernav
+        include include/footercopyright
+
